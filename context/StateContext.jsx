@@ -24,7 +24,7 @@ export function StateContext({ children }) {
   const [selectedCountry, setSelectedCountry] = useState("India");
   const [inputText, setInputText] = useState(null);
   const [countryData, setCountryData] = useState(null);
-  const [cords, setCords] = useState([20.0, 77.0])
+  // const [cords, setCords] = useState([20.0, 77.0])
 
 
   function setData(data) {
@@ -34,7 +34,6 @@ export function StateContext({ children }) {
     }
     let collectedData = data.filter((x) => x.name.common == selectedCountry);
     setCountryData({ ...collectedData[0] });
-    console.log(countryData)
   }
 
   useEffect(() => {
